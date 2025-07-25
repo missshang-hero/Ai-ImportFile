@@ -1,0 +1,271 @@
+@colorBgContainer: #fff;
+@colorText: #1d2129;
+@colorBorder: #f0f0f0;
+@colorBgTextHover: #f5f5f5;
+@colorBgLayout: #f5f6fa;
+
+// 下面是原有样式
+
+.copilotChat {
+  display: flex;
+  flex-direction: column;
+  background: @colorBgContainer;
+  color: @colorText;
+}
+
+// chatHeader 样式
+.chatHeader {
+  height: 52px;
+  box-sizing: border-box;
+  border-bottom: 1px solid @colorBorder;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 16px;
+}
+.headerTitle {
+  font-weight: 600;
+  font-size: 15px;
+}
+.headerButton {
+  font-size: 18px;
+}
+.conversations {
+  width: 300px;
+  .ant-conversations-list {
+    padding-inline-start: 0;
+  }
+}
+// chatList 样式
+.chatList {
+  overflow: auto;
+  padding-block: 16px;
+  flex: 1;
+}
+.chatWelcome {
+  margin-inline: 16px;
+  padding: 12px 16px;
+  border-radius: 2px 12px 12px 12px;
+  background: @colorBgTextHover;
+  margin-bottom: 16px;
+}
+.loadingMessage {
+  background-image: linear-gradient(90deg, #ff6b23 0%, #af3cb8 31%, #53b6ff 89%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+// chatSend 样式
+.chatSend {
+  padding: 12px;
+}
+.sendAction {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+.speechButton {
+  font-size: 18px;
+  color: @colorText !important;
+}
+
+// workarea 样式
+.copilotWrapper {
+  min-width: 1000px;
+  height: 100vh;
+  display: flex;
+}
+.workarea {
+  flex: 1;
+  background: @colorBgLayout;
+  display: flex;
+  flex-direction: column;
+}
+.workareaHeader {
+  box-sizing: border-box;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px 0 28px;
+  border-bottom: 1px solid @colorBorder;
+}
+.workareaHeader .headerTitle {
+  font-weight: 600;
+  font-size: 15px;
+  color: @colorText;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.workareaHeader .headerButton {
+  background-image: linear-gradient(78deg, #8054f2 7%, #3895da 95%);
+  border-radius: 12px;
+  height: 24px;
+  width: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.workareaBody {
+  flex: 1;
+  padding: 16px;
+  background: @colorBgContainer;
+  border-radius: 16px;
+  min-height: 0;
+}
+.bodyContent {
+  overflow: auto;
+  height: 100%;
+  padding-right: 10px;
+}
+.bodyText {
+  color: @colorText;
+  padding: 8px;
+}
+
+.chatMsg-user {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+.chatMsg-assistant {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+.chatMsg-bubble {
+  background: #e6f4ff;
+  color: #222;
+  border-radius: 8px;
+  padding: 8px 16px;
+  max-width: 320px;
+  box-shadow: 0 2px 8px #e6f4ff;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.chatMsg-assistant .chatMsg-bubble {
+  background: #fff;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+
+// 文件卡片样式
+.chatMsg-user .file-message-card,
+.chatMsg-assistant .file-message-card {
+  background: #fafbfc;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 4px 0;
+  min-width: 220px;
+  max-width: 340px;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+.file-message-card-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.file-message-card-icon {
+  font-size: 22px;
+  margin-right: 12px;
+}
+.file-message-card-info {
+  flex: 1;
+}
+.file-message-card-name {
+  font-weight: 500;
+}
+.file-message-card-size {
+  color: #8c8c8c;
+  font-size: 13px;
+}
+
+// 确认弹框样式
+.confirm-box {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+.confirm-btn {
+  border-radius: 8px !important;
+  font-weight: 500;
+  min-width: 96px;
+  height: 36px;
+  font-size: 16px;
+}
+
+// 快捷操作样式
+.quick-actions {
+  margin-top: 16px;
+  padding: 16px;
+  background: #fafbfc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+.quick-actions-title {
+  color: #8c8c8c;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.quick-actions-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.quick-actions-btn {
+  color: #1677ff !important;
+  background: #f0f7ff !important;
+  border-radius: 8px !important;
+  font-weight: 500;
+  font-size: 15px;
+  height: 40px;
+}
+
+.welcome-card {
+  display: flex;
+  align-items: center;
+  background: #ffeaea;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 16px;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+.welcome-card-text {
+  flex: 1;
+  color: #333;
+}
+.welcome-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.welcome-card-desc {
+  font-size: 15px;
+  color: #666;
+  white-space: pre-line;
+}
+.welcome-card-img {
+  width: 120px;
+  height: 80px;
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome-card-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+} 
